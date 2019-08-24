@@ -1,6 +1,6 @@
 
-<? include "ui/header.php"; ?>
-<? include "ui/menulogin.php"; ?>
+<?php include "ui/header.php"; ?>
+<?php include "ui/menulogin.php"; ?>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -54,7 +54,7 @@
 	}
 </script>
  
-<? //include "ui/footer.php"; ?>
+<?php //include "ui/footer.php"; ?>
 
   </div>
 </div><!-- End page content -->

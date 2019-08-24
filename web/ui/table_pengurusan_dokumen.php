@@ -1,5 +1,5 @@
 
-<?  
+<?php  
 date_default_timezone_set("Asia/Kuala_lumpur");
 	$date = new DateTime();
 	$current_date=$date->format('Y-m-d');

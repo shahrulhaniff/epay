@@ -24,7 +24,7 @@ function getJabatan($idPekerja){
 // get Jabatan from id_kodtransaksi.
 //----------------------------------------------------------------------------------
 function getJabatanByIDK($id_kodtransaksi){
-	include "../global.php";
+	include "../../global.php";
 	$s="SELECT jabatan from kod_jenispengguna K, kod_transaksi A
 		WHERE A.id_kodtransaksi='$id_kodtransaksi'
 		AND K.kod_pengguna=A.kod_pengguna
@@ -156,6 +156,7 @@ $nama="";
 if ($rekod=='SBT'){ $nama="Sebut Harga/Tender"; }
 if ($rekod=='SYD'){ $nama="Seminar/Yuran/Denda"; }
 if ($rekod=='D'){ $nama="Derma"; }
+if ($rekod=='J'){ $nama="Jualan"; }
 
 
 return $nama;

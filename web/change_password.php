@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "../server.php";
 
@@ -6,7 +6,7 @@ if (empty($_SESSION['user'])) {
 	header('Location:login.php'); }
 ?>
 
-<? include "ui/header.php"; ?>
+<?php include "ui/header.php"; ?>
 <? include "ui/menu.php"; ?>
 
 
@@ -25,11 +25,11 @@ if (empty($_SESSION['user'])) {
     <div class="w3-row-padding" style="margin:0 -16px">
 
    
-<? include "ui/form_change_password.php"; ?>
+<?php include "ui/form_change_password.php"; ?>
   </div>
   </div>
   
-<? include "ui/footer.php"; ?>
+<?php include "ui/footer.php"; ?>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-1.10.2.js"></script>

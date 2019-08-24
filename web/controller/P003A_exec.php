@@ -35,7 +35,7 @@ function refreshParent() {
 	self.opener.location.reload();
 }
 </script>
-<? 
+<?php 
 
 				//send email
 				$mail->setFrom(EMAIL);

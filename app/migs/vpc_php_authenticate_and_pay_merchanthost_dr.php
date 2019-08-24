@@ -299,7 +299,7 @@ $title = $_GET["Title"];
                 <td align="right"><strong><i>Message: </i></strong></td>
                 <td><?=$message?></td>
             </tr>
-<? 
+<?php 
     // only display the following fields if not an error condition
     if ($txnResponseCode != "7" && $txnResponseCode != "No Value Returned") { 
 ?>
@@ -404,13 +404,13 @@ $title = $_GET["Title"];
                 <td align="right"><strong><i>Hash Validated Correctly: </i></strong></td>
                 <td><?=$hashValidated?></td>
             </tr>
-<? 
+<?php 
 } ?>    </table>
         <!-- TK <center><P><a href='<?=$againLink?>'>New Transaction</a></P></center> -->
     </body>
 </html>
 
-<?    
+<?php    
 // End Processing
 
 // This method uses the QSI Response code retrieved from the Digital

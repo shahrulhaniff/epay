@@ -76,7 +76,6 @@
                                             <th>Bil</th>
                                             <th>Nombor Rujukan</th>
 											 <th>Pusat Tanggungjawab (PTj)</th>
-                                            <th>Penerima</th>
                                             <th>Harga (RM)</th>
 											<th>Tarikh & Masa</th>
 											<th>Tindakan</th>
@@ -108,7 +107,7 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 											$info3 = mysqli_fetch_array( $data3 );
                                             echo "<td>".$info3['jabatan'] . " </td>";
 											
-                                            echo "<td>".$info['doc_acceptby_nama'] . " </td>";
+                                            //echo "<td>".$info['doc_acceptby_nama'] . " </td>";
 											echo "<td>".$info['jumlah'] . " </td>";
 											echo "<td>".$tarikh . " </td>";
                                             ?>

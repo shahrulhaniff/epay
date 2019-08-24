@@ -1,4 +1,4 @@
-<?
+<?php
 //untuk php data object (pdo)
 	class Database {
 		/*

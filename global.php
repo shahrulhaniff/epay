@@ -1,7 +1,7 @@
-<?
+<?php
    $hn      = 'localhost';
    $un      = 'root';
-   $pwd     = ''; /* kena buat skali lg kat bawah sebab class xdpt baca global, kena tanya siapa power java */
+   $pwd     = ''; /* MyP@eYGB24 */
    $db      = 'cashless';
    $cs      = 'utf8';
 

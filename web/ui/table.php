@@ -54,6 +54,7 @@
 												<option value="SBT">Sebut Harga/Tender</option>
 												<option value="SYD">Seminar/Yuran/Denda</option>
 												<option value="D">Derma</option>
+												<option value="J">Jualan Buku</option>
 											</select>
 											</div></td>											
 									<td><a><button type="submit" class="btn btn-primary">Tambah</button></a></td>

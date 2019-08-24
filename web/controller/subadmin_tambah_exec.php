@@ -48,7 +48,20 @@
 				$sql2="SELECT kod_pengguna FROM kod_jenispengguna
 							WHERE jabatan='$jabatan2' AND jenis_pengguna='sub-admin'";
 				$result2=mysqli_query($conn,$sql2);
+				//if ($result2){
 				$kod_pengguna=mysqli_fetch_object($result2)->kod_pengguna; 
+				// }
+				// else {
+					// $sqlz = "SELECT MAX(kod_pengguna) FROM kod_jenispengguna AS kodz" ;
+					// $resultz=mysqli_query($conn,$sqlz);
+					// $infoz = mysqli_fetch_array( $resultz );
+					// $kod_pengguna=$infoz['kodz'] + 1;
+					
+					// $sql3="INSERT INTO kod_jenispengguna (kod_pengguna,jenis_pengguna,jabatan) values('$kod_pengguna','sub-admin','$jabatan')";
+				    // $result3=mysqli_query($conn,$sql3);
+				// }
+				//$info = mysqli_fetch_array( $result2 );
+				//$kod_pengguna=$info['kod_pengguna'];
 				
 				
 				
@@ -61,7 +74,7 @@ function refreshParent() {
 	self.opener.location.reload();
 }
 </script>
-<? 
+<?php 
 			
 				
 
@@ -93,8 +106,7 @@ function refreshParent() {
 					
 					$sql4 = "INSERT INTO akaun_pengguna (ic_pengguna,kod_pengguna,pwd,status_aktif) values('$ic_pengguna','$kod_pengguna','$ic_pengguna2','yes')";
 					$result4=mysqli_query($conn,$sql4);
-					
-					echo"<script>alert('Pendaftaran Sub-Admin Berjaya');document.location.href='../senarai_sa.php?jabatan=$jabatan';</script>";
+					echo"<script>alert('Pendaftaran Sub-Admin Berjaya. ".$kod_pengguna."');document.location.href='../senarai_sa.php?jabatan=$jabatan';</script>";
 				}
 
 		}else{

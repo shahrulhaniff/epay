@@ -282,7 +282,7 @@ if ($txnResponseCode == "7" || $txnResponseCode == "No Value Returned") {
             <td align='right'><b><i>Message: </i></b></td>
             <td><?=$message?></td>
           </tr>
-<? 
+<?php 
     // only display the following fields if not an error condition
     if ($txnResponseCode != "7" && $txnResponseCode != "No Value Returned") { 
 ?>
@@ -339,7 +339,7 @@ if ($txnResponseCode == "7" || $txnResponseCode == "No Value Returned") {
             <td align='right'><b><i>Ticket Number: </i></b></td>
             <td><?=$ticketNumber?></td>
           </tr>
-<? } ?>
+<?php } ?>
         </table>
     
     <center><p><A HREF='<?=$HTTP_REFERER?>'>New Transaction</a></p></center>
@@ -347,7 +347,7 @@ if ($txnResponseCode == "7" || $txnResponseCode == "No Value Returned") {
     </body>
     </html>
 
-<?    
+<?php    
 // End Processing
 
 //  ----------------------------------------------------------------------------

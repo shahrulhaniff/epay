@@ -316,7 +316,7 @@ if ($txnResponseCode == "7" || $txnResponseCode == "No Value Returned") {
         <td align='right'><strong><em>Found Multiple Receipts: </em></strong></td>
         <td><?=$multipleDRs?></td>
     </tr>
-<?      
+<?php      
 // Only display the following fields if not an error condition
 if (strtoupper($drExists) != "N") {
 ?>
@@ -351,7 +351,7 @@ if (strtoupper($drExists) != "N") {
         <td><?=$message?></td>
     </tr>
 
-<? // only display the following fields if not an error condition
+<?php // only display the following fields if not an error condition
 if ($txnResponseCode != "7" && $txnResponseCode != "No Value Returned" && strtoupper($drExists) == "Y") { ?>
 
     <tr class="shade">
@@ -384,7 +384,7 @@ if ($txnResponseCode != "7" && $txnResponseCode != "No Value Returned" && strtou
             Fields below are additional fields for extra functionality.</DIV></td>
     </tr>
 
-<?        if ($amaTransaction) { ?>
+<?php        if ($amaTransaction) { ?>
 
     <tr class="title">
         <td colspan="2" height="25"><P><strong>&nbsp;Financial Transaction Fields</strong></P></td>
@@ -410,7 +410,7 @@ if ($txnResponseCode != "7" && $txnResponseCode != "No Value Returned" && strtou
         <td><?=$ticketNumber?></td>
     </tr>
 
-<?        } else { ?>
+<?php        } else { ?>
 
       
     <tr class="title">
@@ -466,7 +466,7 @@ if ($txnResponseCode != "7" && $txnResponseCode != "No Value Returned" && strtou
             <font color='#00AA00'>The 3-D Secure values shown in green are for information only and are not required to be stored.</font>
         </td>
     </tr>
-<?      }
+<?php      }
     }
 } ?>
 </table>
@@ -474,7 +474,7 @@ if ($txnResponseCode != "7" && $txnResponseCode != "No Value Returned" && strtou
 </body>
 </html>
 
-<?    
+<?php    
 // End Processing
 
 //  ----------------------------------------------------------------------------

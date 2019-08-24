@@ -1,4 +1,4 @@
-<?
+php
 include "../server.php";
  
   $cn = $_GET['cn'];

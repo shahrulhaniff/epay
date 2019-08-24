@@ -164,14 +164,14 @@ if (strlen($SECURE_SECRET) > 0) {
 <body>
 	<form name="order" action="<?=$vpcURL?>" method="post">
 	<p>Please wait while your payment is being processed...</p>
-<?	
+<?php	
 	// Add all the fields from the input form, except for the Submit Button and the VPCURL.
 	//For Each item In Request.Form
 	foreach($_POST as $key => $value) {
 		if (strlen($value) > 0) {
 ?>
         	<input type="hidden" name="<?=$key?>" value="<?=$value?>"/><br>
-<?             
+<?php             
     	}
 	}
 ?>		

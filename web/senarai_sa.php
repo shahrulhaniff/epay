@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "../server.php";
 $pagenow="P003";
@@ -23,8 +23,8 @@ else {
 	$_POST['jabatan'] = $_SESSION['jabatan']; 
 }
 ?>
-<? include "ui/header.php"; ?>
-<? include "ui/menu.php"; ?>
+<?php include "ui/header.php"; ?>
+<?php include "ui/menu.php"; ?>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -50,11 +50,11 @@ else {
 
                 <div class="modal-body">
 
-                <form method="post" action="../web/controller/subadmin_tambah_exec.php?jabatan=<?echo $_POST['jabatan'];?>">
+                <form method="post" action="../web/controller/subadmin_tambah_exec.php?jabatan=<?php echo $_POST['jabatan'];?>">
 
 							<div class="form-group" align="left">
 								<label><font color="red">** Maklumat Wajib Diisi.</font></label>
-								<br><input type="hidden" name="id_jenistransaksi" id="id_jenistransaksi" class="form-control" value="<? echo $id;?>" readonly />
+								<br><input type="hidden" name="id_jenistransaksi" id="id_jenistransaksi" class="form-control" value="<?php echo $id;?>" readonly />
 							</div>
 							
 							<div class="form-group">
@@ -107,7 +107,7 @@ else {
 								<!-- Advanced Tables -->
 								<div class="panel panel-default">
 									<div class="panel-heading">
-									<? 
+									<?php 
 										$JAB = $_POST['jabatan'];
 										$KodJabatan = getKodJabatan($JAB);
 									?>
@@ -146,8 +146,8 @@ else {
 														echo "<td>".$info['email'] . " </td>";
 														echo "<td>".$info['no_telefon'] . " </td>";
 														?><td>
-													  <button class="btn btn-info" data-toggle="modal" data-target="#myModal<?echo $i;?>">Kemaskini</button>
-													<a href="../web/controller/subadmin_delete_exec.php?ic_pengguna=<?echo $info['ic_pengguna'];?>&KodJabatan=<?=$KodJabatan?>"><button type="button" class="btn btn-danger" onclick="return confirm('Anda pasti untuk padam data ini?');">Padam</button></a>
+													  <button class="btn btn-info" data-toggle="modal" data-target="#myModal<?php echo $i;?>">Kemaskini</button>
+													<a href="../web/controller/subadmin_delete_exec.php?ic_pengguna=<?php echo $info['ic_pengguna'];?>&KodJabatan=<?=$KodJabatan?>"><button type="button" class="btn btn-danger" onclick="return confirm('Anda pasti untuk padam data ini?');">Padam</button></a>
 													 </td>
 			<!-- Modal update Sub-Admin -->
 			<div class="modal fade" id="myModal<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -166,7 +166,7 @@ else {
 							
 										<div class="form-group" align="left">
 											<label><font color="red">** Maklumat Wajib Diisi.</font></label>
-											<br><input type="hidden" name="ic_lama_pengguna" id="ic_lama_pengguna" class="form-control" value="<? echo $info['ic_pengguna'];?>" readonly />
+											<br><input type="hidden" name="ic_lama_pengguna" id="ic_lama_pengguna" class="form-control" value="<?php echo $info['ic_pengguna'];?>" readonly />
 										</div>
 										 
 										<div class="form-group">
@@ -204,7 +204,7 @@ else {
         </div><!-- /.modal -->
 														
 														
-													 <?
+													 <?php
 														echo "</tr>";
 														
 													 $i++;
@@ -221,7 +221,7 @@ else {
 			  </div>
 			  </div>
 			  
-<? include "ui/footer.php"; ?>
+<?php include "ui/footer.php"; ?>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-1.10.2.js"></script>

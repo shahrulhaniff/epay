@@ -1,4 +1,4 @@
-<?  
+<?php  
 date_default_timezone_set("Asia/Kuala_lumpur");
 	$date = new DateTime();
 	$current_date=$date->format('Y-m-d');
@@ -33,42 +33,42 @@ date_default_timezone_set("Asia/Kuala_lumpur");
 				
 <div id='cssmenu'>
 	<ul>
-		<li class="<? echo ($flag=='tb_1'?'active':'') ?>"><a href="SA_P005.php?status=<?echo $status;?>&dt=tiada&flg=tb_1&flagScreen=<?echo $flagScreen;?>">Papar Semua</a></li>
-		<? if ($dateSelection=='tiada' || $dateSelection==''){
+		<li class="<?php echo ($flag=='tb_1'?'active':'') ?>"><a href="SA_P005.php?status=<?php echo $status;?>&dt=tiada&flg=tb_1&flagScreen=<?php echo $flagScreen;?>">Papar Semua</a></li>
+		<?php if ($dateSelection=='tiada' || $dateSelection==''){
 			
 			?>
-		<li class="<? echo ($flag=='tb_2'?'active':'') ?>"><a href="SA_P005.php?status=<?echo $status;?>&dt=<? echo $current_date; //21-03-2019?>&flg=tb_2&flagScreen=<?echo $flagScreen;?>">Carian Mengikut Tarikh</a></li>
-		<? }else {?>
-		<li class="<? echo ($flag=='tb_2'?'active':'') ?>"><a href="SA_P005.php?status=<?echo $status;?>&dt=<? echo $dateSelection; //21-03-2019?>&flg=tb_2&flagScreen=<?echo $flagScreen;?>">Carian Mengikut Tarikh</a></li>
-		<?}?>
+		<li class="<?php echo ($flag=='tb_2'?'active':'') ?>"><a href="SA_P005.php?status=<?php echo $status;?>&dt=<?php echo $current_date; //21-03-2019?>&flg=tb_2&flagScreen=<?php echo $flagScreen;?>">Carian Mengikut Tarikh</a></li>
+		<?php }else {?>
+		<li class="<?php echo ($flag=='tb_2'?'active':'') ?>"><a href="SA_P005.php?status=<?php echo $status;?>&dt=<?php echo $dateSelection; //21-03-2019?>&flg=tb_2&flagScreen=<?php echo $flagScreen;?>">Carian Mengikut Tarikh</a></li>
+		<?php }?>
 		
 	</ul>
 </div>
 <div id='cssmenu'>
 	<ul>
-		<li class="<? echo ($flagScreen=='tab_1'?'active':'') ?>"><a href="SA_P005.php?status=NO&dt=<? echo $dateSelection;?>&flg=<? echo $flag; ?>&flagScreen=tab_1">Dokumen Belum Dituntut</a></li>
-		<li class="<? echo ($flagScreen=='tab_2'?'active':'') ?>"><a href="SA_P005.php?status=YES&dt=<? echo $dateSelection;?>&flg=<? echo $flag; ?>&flagScreen=tab_2">Dokumen Telah Dituntut</a></li>
+		<li class="<?php echo ($flagScreen=='tab_1'?'active':'') ?>"><a href="SA_P005.php?status=NO&dt=<?php echo $dateSelection;?>&flg=<?php echo $flag; ?>&flagScreen=tab_1">Dokumen Belum Dituntut</a></li>
+		<li class="<?php echo ($flagScreen=='tab_2'?'active':'') ?>"><a href="SA_P005.php?status=YES&dt=<?php echo $dateSelection;?>&flg=<?php echo $flag; ?>&flagScreen=tab_2">Dokumen Telah Dituntut</a></li>
 	</ul>
 </div>
  
 <!-- carian-->
-<? if ($dateSelection!='tiada'){?>
+<?php if ($dateSelection!='tiada'){?>
 <div align="center">
 				<h4>Carian**</h4>
 				<table>
-				<tr><? if ($dateSelection==''){?>
-					<td><input class="form-control" required type="date" placeholder="cari" id="dateSelection" name="dateSelection" value="<?echo $current_date?>"></td>
+				<tr><?php if ($dateSelection==''){?>
+					<td><input class="form-control" required type="date" placeholder="cari" id="dateSelection" name="dateSelection" value="<?php echo $current_date?>"></td>
 					
-				<?}else {?>
-					<td><input class="form-control" required type="date" placeholder="cari" id="dateSelection" name="dateSelection" value="<?echo $dateSelection;?>"></td>
-				<?}?>
+				<?php }else {?>
+					<td><input class="form-control" required type="date" placeholder="cari" id="dateSelection" name="dateSelection" value="<?php echo $dateSelection;?>"></td>
+				<?php }?>
 				<td><center> <button onclick="submit_cari()" align="right" class="btn btn-warning">Cari</button></center></td>
 				</tr>
 				
 				</table>
 				<h6>** masukkan tarikh carian anda</h6>
 </div>
-<?}?>
+<?php } ?>
 
 
 
@@ -134,9 +134,9 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 
                                             ?>
 											<td>
-											<button class="btn btn-info" data-toggle="modal" data-target="#myModalInfo<?echo $info['id_transaksi'];?>">Papar</button>
+											<button class="btn btn-info" data-toggle="modal" data-target="#myModalInfo<?php echo $info['id_transaksi'];?>">Papar</button>
                                 
-										 <?
+										 <?php
 										 $data4 = mysqli_query($conn,"SELECT * FROM kod_jenispengguna WHERE jabatan='".$_SESSION['JABATAN']."'"); 
 											//or die(mysqli_error());	
 											$info4 = mysqli_fetch_array( $data4 );
@@ -144,9 +144,9 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 										$kod_pengguna=$info4['kod_pengguna'];
 										 if($kod_pengguna=="3"){ //3 = JPP
 										 ?>
-										 <button class="btn btn-info" data-toggle="modal" data-target="#myModal<?echo $info['id_transaksi'];?>">Kemaskini</button>
-										<?}?>
-										<!--<a href="../web/controller/jenis_transaksi_delete_exec.php?id_jenistransaksi=<?echo $info['id_transaksi']; ?>"><button type="button" class="btn btn-danger" onclick="return confirm('Anda pasti untuk padam data ini?');">Padam</button></a>-->
+										 <button class="btn btn-info" data-toggle="modal" data-target="#myModal<?php echo $info['id_transaksi'];?>">Kemaskini</button>
+										<?php }?>
+										<!--<a href="../web/controller/jenis_transaksi_delete_exec.php?id_jenistransaksi=<?php echo $info['id_transaksi']; ?>"><button type="button" class="btn btn-danger" onclick="return confirm('Anda pasti untuk padam data ini?');">Padam</button></a>-->
 										 </td>
 										 </tr>
 	<!-- Modal Kemaskini-->
@@ -165,38 +165,38 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 												
 												<div class="form-group">
 													<label for="comment">Nombor Rujukan</label>
-													<span> : <? echo $info['norujukan'];?></span>
+													<span> : <?php echo $info['norujukan'];?></span>
 												</div> 
 												
 												<div class="form-group">
 													<label for="comment">Jenis Transaksi</label>
-													<?
+													<?php
 														$dataJenistransaksi = mysqli_query($conn,"SELECT jenistransaksi FROM kod_jenistransaksi WHERE id_jenistransaksi='".$info['id_jenistransaksi']."' order by id_jenistransaksi"); 
 														//or die(mysqli_error());	
 														$infoJenistransaksi = mysqli_fetch_array( $dataJenistransaksi );
 													?>
-													<span> : <? echo $infoJenistransaksi['jenistransaksi'];?></span>
+													<span> : <?php echo $infoJenistransaksi['jenistransaksi'];?></span>
 												</div>	
 												
 												<div class="form-group">
 													<label for="comment">Tarikh</label>
-													<span> : <? echo $tarikh;?></span>
+													<span> : <?php echo $tarikh;?></span>
 												</div> 
 												
 												<div class="form-group">
 													<label for="comment">Harga</label>
-													<span> : RM <? echo $info['jumlah'];?></span>
+													<span> : RM <?php echo $info['jumlah'];?></span>
 													
 												</div>
 													
 												<div class="form-group" align="left">
 													<label>Daripada</label>
-												<?
+												<?php
 													$data1 = mysqli_query($conn,"SELECT max(nama) AS nama FROM maklumat_pengguna WHERE ic_pengguna='".$_SESSION['user']."' ORDER BY ic_pengguna");	
 													$info1 = mysqli_fetch_array( $data1 );
 												?>
-												<input type="hidden" class="form-control" id="doc_giveby" name="doc_giveby" value="<?echo $_SESSION['user'];?>" required >
-													<span> : <? echo $info1['nama'];?> (<? echo $_SESSION['user'];?>)</span>
+												<input type="hidden" class="form-control" id="doc_giveby" name="doc_giveby" value="<?php echo $_SESSION['user'];?>" required >
+													<span> : <?php echo $info1['nama'];?> (<?php echo $_SESSION['user'];?>)</span>
 												</div>
 
 												<div class="form-group" align="left">
@@ -206,23 +206,23 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 												
 												<div class="form-group" align="left">
 													<label>Nombor Kad pengenalan Penerima</label>
-													<input class="form-control" id="doc_acceptby" name="doc_acceptby" value="<? echo $info['doc_acceptby'];?>" required >
+													<input class="form-control" id="doc_acceptby" name="doc_acceptby" value="<?php echo $info['doc_acceptby'];?>" required >
 												</div>
 												
 												
 												<div class="form-group" align="left">
 												<label for="comment">Status Dokumen</label>
 															<select required class="form-control" name="status_dokumen" value="" style="width: 270px">
-															<option value="<? echo $info['status_dokumen'];?>"><? echo $info['status_dokumen'];?></option>	
-															<?
+															<option value="<?php echo $info['status_dokumen'];?>"><?php echo $info['status_dokumen'];?></option>	
+															<?php
 																if ($info['status_dokumen']=="YES"){
 															?>
 															<option value="NO">NO</option>
-															<?
+															<?php
 																}if ($info['status_dokumen']=="NO"){
 															?>
 															<option value="YES">YES</option>
-															<?}?>
+															<?php }?>
 															
 															</select>
 															</div>
@@ -238,7 +238,7 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 			<!--/tamat modal kemaskini-->
 			
 			<!-- Modal Papar Maklumat-->
-											<div class="modal fade" id="myModalInfo<?echo $info['id_transaksi'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal fade" id="myModalInfo<?php echo $info['id_transaksi'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 											<div class="modal-dialog">
 												
 											<div class="modal-content">
@@ -251,44 +251,44 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 												
 												<div class="form-group">
 													<label for="comment">Nombor Rujukan</label>
-													<span> : <? echo $info['norujukan'];?></span>
+													<span> : <?php echo $info['norujukan'];?></span>
 												</div> 
 												
 												<div class="form-group">
 													<label for="comment">Jenis Transaksi</label>
-													<span> : <? echo $infoJenistransaksi['jenistransaksi'];?></span>
+													<span> : <?php echo $infoJenistransaksi['jenistransaksi'];?></span>
 												</div>	
 											
 												<div class="form-group">
 													<label for="comment">Tarikh</label>
-													<span> : <? echo $tarikh;?></span>
+													<span> : <?php echo $tarikh;?></span>
 												</div> 
 												
 												<div class="form-group">
 													<label for="comment">Harga</label>
-													<span> : RM <? echo $info['jumlah'];?></span>
+													<span> : RM <?php echo $info['jumlah'];?></span>
 													
 												</div>
 												
 												<div class="form-group" align="left">
 													<label>Daripada</label>
-													<span> : <? echo $info1['nama'];?> (<? echo $info['doc_giveby'];?>)</span>
+													<span> : <?php echo $info1['nama'];?> (<?php echo $info['doc_giveby'];?>)</span>
 												</div>
 												
 												<div class="form-group" align="left">
 													<label>Kepada</label>
 												
-													<span> : <? echo $info['doc_acceptby_nama'];?> (<? echo $info['doc_acceptby'];?>)</span>
+													<span> : <?php echo $info['doc_acceptby_nama'];?> (<?php echo $info['doc_acceptby'];?>)</span>
 												</div>
 												
 												<div class="form-group" align="left">
 													<label for="comment">Status Transaksi</label>
-													<span> : <? echo $info['statustransaction'];?></span>
+													<span> : <?php echo $info['statustransaction'];?></span>
 												</div>
 												
 												<div class="form-group" align="left">
 													<label>Status Dokumen</label>
-													<span> : <? echo $info['status_dokumen'];?></span>
+													<span> : <?php echo $info['status_dokumen'];?></span>
 												</div>
 													
 												 <div class="modal-footer">
@@ -301,7 +301,7 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 											</div><!-- /.modal-dialog -->
 											</div><!-- /.modal -->
 											
-										 <?
+										 <?php
 											
 										$i++;}
 										?>
@@ -327,8 +327,8 @@ $(document).ready(function() {
 		var dateSelection=$('#dateSelection').val();
 		
 		
-		 var flg = "<? echo $flag; ?>";
-		 var flagScreen = "<?echo $flagScreen;?>";
+		 var flg = "<?php echo $flag; ?>";
+		 var flagScreen = "<?php echo $flagScreen;?>";
 		 var status = "<?php echo $status ?>";
 		 if (dateSelection!=''){ 
 			// location.href='P005.php?dateSelection='+dateSelection+'&user_id='+user_id+'&groups_id='+groups_id+'&nama_pengawal='+nama_pengawal;

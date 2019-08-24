@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "../server.php";
 $pagenow="P003";
@@ -8,8 +8,8 @@ if (empty($_SESSION['user'])) {
 
 
 ?>
-<? include "ui/header.php"; ?>
-<? include "ui/menu.php"; ?>
+<?php include "ui/header.php"; ?>
+<?php include "ui/menu.php"; ?>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -107,8 +107,8 @@ if (empty($_SESSION['user'])) {
 														echo "<td>".$info['singkatan'] . " </td>";
 														echo "<td>".$info['namaptj'] . " </td>";
 														?><td>
-													  <button class="btn btn-info" data-toggle="modal" data-target="#myModal<?echo $i;?>">Kemaskini</button>
-													<a href="../web/controller/P002_delete_exec.php?idptj=<?echo $info['idptj'];?>"><button type="button" class="btn btn-danger" onclick="return confirm('Anda pasti untuk padam data ini?');">Padam</button></a>
+													  <button class="btn btn-info" data-toggle="modal" data-target="#myModal<?php echo $i;?>">Kemaskini</button>
+													<a href="../web/controller/P002_delete_exec.php?idptj=<?php echo $info['idptj'];?>"><button type="button" class="btn btn-danger" onclick="return confirm('Anda pasti untuk padam data ini?');">Padam</button></a>
 													 </td>
 			<!-- Modal update Sub-Admin -->
 			<div class="modal fade" id="myModal<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -155,7 +155,7 @@ if (empty($_SESSION['user'])) {
         </div><!-- /.modal -->
 														
 														
-													 <?
+													 <?php
 														echo "</tr>";
 														
 													 $i++;
@@ -172,7 +172,7 @@ if (empty($_SESSION['user'])) {
 			  </div>
 			  </div>
 			  
-<? include "ui/footer.php"; ?>
+<?php include "ui/footer.php"; ?>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-1.10.2.js"></script>

@@ -1,6 +1,6 @@
 
-<? include "ui/header.php"; ?>
-<? include "ui/menulogin.php"; ?>
+<?php include "ui/header.php"; ?>
+<?php include "ui/menulogin.php"; ?>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -20,11 +20,11 @@
     <div class="w3-row-padding" style="margin:0 -16px">
 
    
-<? include "ui/form_forgot_password.php"; ?>
+<?php include "ui/form_forgot_password.php"; ?>
   </div>
   </div>
  
-<? //include "ui/footer.php"; ?>
+<?php //include "ui/footer.php"; ?>
 
   <!-- End page content -->
   <!-- last skali paste preloader js punya sebelum tutup body -->

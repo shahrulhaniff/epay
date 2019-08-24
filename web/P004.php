@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "../server.php";
 $pagenow="P004";
@@ -7,8 +7,8 @@ if (empty($_SESSION['user'])) {
 	header('Location:login.php'); }
 ?>
 
-<? include "ui/header.php"; ?>
-<? include "ui/menu.php"; ?>
+<?php include "ui/header.php"; ?>
+<?php include "ui/menu.php"; ?>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -27,11 +27,11 @@ if (empty($_SESSION['user'])) {
     <div class="w3-row-padding" style="margin:0 -16px">
 
    
-<? include "ui/table_sebut_harga.php"; ?>
+<?php include "ui/table_sebut_harga.php"; ?>
   </div>
   </div>
   
-<? include "ui/footer.php"; ?>
+<?php include "ui/footer.php"; ?>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-1.10.2.js"></script>

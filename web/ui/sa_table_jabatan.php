@@ -4,7 +4,7 @@
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                             Senarai Jenis Transaksi <b><? echo $_SESSION['JABATAN'];?></b>
+                             Senarai Jenis Transaksi <b><?php echo $_SESSION['JABATAN'];?></b>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -29,13 +29,14 @@
 										<?php
 										$i=1;
 										while($info = mysqli_fetch_array( $data )) {
+											$jb = getNamaJenisT($info['jenistransaksi']);
 											echo "<tr class='gradeA'>";
 											echo "<td>".$i." </td>";
-                                            echo "<td>".$info['jenistransaksi'] . " </td>";
+                                            echo "<td>".$jb . " </td>";
 										?><td>
-										<form action="QRLogo.php" method="POST" target="_blank"><input type="hidden" name="id_jenistransaksi" value="<?echo $info['id_jenistransaksi'];?>"><input type="submit" value="Jana Kod QR"></form>
+										<form action="QRLogo.php" method="POST" target="_blank"><input type="hidden" name="id_jenistransaksi" value="<?php echo $info['id_jenistransaksi'];?>"><input type="submit" value="Jana Kod QR"></form>
 										</td>
-										 <?
+										 <?php
 											echo "</tr>";
 										$i++;}
 										?>

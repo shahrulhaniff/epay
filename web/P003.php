@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "../server.php";
 $pagenow="P003";
@@ -11,8 +11,8 @@ unset($_SESSION['id']);
 unset($_SESSION['jabatan']);
 	
 ?>
-<? include "ui/header.php"; ?>
-<? include "ui/menu.php"; ?>
+<?php include "ui/header.php"; ?>
+<?php include "ui/menu.php"; ?>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -27,10 +27,10 @@ unset($_SESSION['jabatan']);
   </header>
 
   <div class="w3-row">
-<? include "ui/table.php"; ?>
+<?php include "ui/table.php"; ?>
   </div>
   
-<? include "ui/footer.php"; ?>
+<?php include "ui/footer.php"; ?>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-1.10.2.js"></script>

@@ -6,6 +6,7 @@ include "../../server.php";
   $cn = $_GET['cn'];
   $ced = $_GET['ced'];
   $csc = $_GET['csc'];
+  $rf = $_GET['rf'];
   $pa = $_GET['pa'];
   $idk = $_GET['idk'];
   $user = $_GET['user'];
@@ -20,6 +21,7 @@ include "../../server.php";
  $_SESSION['USER']	= $user;
  $_SESSION['IDK']	= $idk;
  $_SESSION['IDJT'] 	= $id_jenistransaksi;
+ $_SESSION['RF']	= $rf;
  $_SESSION['PA']	= $pa;
  $tarikh 			=date('Y-m-d h:i:s');
  
@@ -36,7 +38,8 @@ include "../../server.php";
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','https://epayment.unisza.edu.my/sample/sample_finish.php',$byrn_array);
     // yg ni unkomen $vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','https://epayment.unisza.edu.my/langlit_finish.php',$byrn_array);
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','https://epayment.unisza.edu.my/sample/sample_finish.php');
-    $vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS','https://cashless1234.000webhostapp.com/app/sample/sample_finish.php');
+    $vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS','https://epay.unisza.edu.my/app/sample/sample_finish.php');
+    //$vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS','https://cashless1234.000webhostapp.com/app/sample/sample_finish.php');
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS-APP','http://localhost/cashweb/app/sample/sample_finish.php');
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','http://myraxsoft.com/cashless/app/sample/sample_finish.php');
     $vpc->processSubmit();
@@ -78,13 +81,15 @@ include "../../server.php";
 <div class="container bs-docs-container">
 
 <center><p><h1>Proses pembayaran anda dibawa ke pelayar bank di paparan berikutnya.</h1>
-<h1>Jumlah:<?=$pa?></h1>
+<center><p><h1>Payment process will be directed to UniSZA's Bank Islam Website</h1>
+<h1>Jumlah/Total Transaction:<?=$pa?></h1>
 </p></center>
 <form name="PayForm" id="PayForm" method="post" action="">
 <input name="fee_type"      type="hidden" maxlength="15" value="<?=$pa?>" id="RegisterFeeType" />
 <input name="registername"  type="hidden" 0="0" maxlength="150" value="<?=$cn?>" id="registername" />
 <input name="registerid"    type="hidden" maxlength="15" value="<?=$ced?>" id="registerid" />
 <input name="email"         type="hidden" maxlength="150" value="<?=$csc?>" id="email" />
+<input name="rf"         	type="hidden" value="<?=$rf?>" id="rf" />
 <input type='submit' value='Teruskan' name='pay' class="button"  />
 </form>
 

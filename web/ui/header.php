@@ -3,7 +3,7 @@
 <head>
 <link rel="icon" href="imgs/ico.png" />
 	<link href="pre/preloader.css" rel="stylesheet">
-<? 
+<?php 
 if(!empty($pagenow)){$title="Menu ".$pagenow;}
 if(empty($title)){ $title = "Cashless@UniSZA"; } 
 ?>

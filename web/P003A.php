@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "../server.php";
 $pagenow="P003";
@@ -43,7 +43,7 @@ $s_jab = $_SESSION['jabatan'];
 
 <div class="w3-twothird">
 	  <label><font color="red">
-	  <?
+	  <?php
 		$IC = $_GET['IC'];
 		$JAB = getJabatan($IC);
 		$NAMA = getNama($IC);
@@ -56,7 +56,7 @@ $s_jab = $_SESSION['jabatan'];
 	  
 	  
 	  
-	  <? if($s_jab!=$JAB){?>
+	  <?php if($s_jab!=$JAB){?>
 	  <label><font color="red">
 	  <br>*Sila sahkan maklumat dibawah jika ingin mendaftar sebagai sub-Admin <?=$s_jab?>.
 	  </font></label>
@@ -89,10 +89,10 @@ $s_jab = $_SESSION['jabatan'];
                                    <button type="submit" class="btn btn-primary" >Lantik Sebagai sub-Admin <?=$s_jab?></button>
 								   <a href="senarai_sa.php" class="btn btn-danger">Batal</a>
 					</form>
-	  <? } /*close if dah daftar subadmin dalam jabatan sama*/ 
+	  <?php } /*close if dah daftar subadmin dalam jabatan sama*/ 
 	  else { ?>
 	  <div class="form-group" align="left">
-                            <input type="HIDDEN" name="id_jenistransaksi" id="id_jenistransaksi" class="formshahrul" value="<? echo $id;?>" readonly />
+                            <input type="HIDDEN" name="id_jenistransaksi" id="id_jenistransaksi" class="formshahrul" value="<?php echo $id;?>" readonly />
 						 </div>
 							 
 							<div class="form-group">
@@ -115,14 +115,14 @@ $s_jab = $_SESSION['jabatan'];
 								<input type="text" class="formshahrul" name="no_telefon" value="<?=$PHONE?>" id="no_telefon" size="20" readonly>
 							</div>
 	  <a href="senarai_sa.php" class="btn btn-danger">Kembali</a>
-	  <? } ?>
+	  <?php } ?>
 	  
 </div>
    
   </div>
   </div>
   
-<? include "ui/footer.php"; ?>
+<?php include "ui/footer.php"; ?>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-1.10.2.js"></script>

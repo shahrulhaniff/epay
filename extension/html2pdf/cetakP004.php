@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 date_default_timezone_set("Asia/Kuala_lumpur");
 require __DIR__.'/vendor/autoload.php';

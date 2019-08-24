@@ -76,7 +76,7 @@ var checked=false;
 }
 </script>-->
 
-<? if(empty($kodcetak)){ $kodcetak = "P000"; } ?>
+<?php if(empty($kodcetak)){ $kodcetak = "P000"; } ?>
 <script>
 $(document).ready(function(){
     $('#getValue').on('click', function(){

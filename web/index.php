@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include "../server.php";
 $pagenow="P001";
@@ -18,8 +18,8 @@ unset($_SESSION['jabatan']);
 	
 	
 ?>
-<? include "ui/header.php"; ?>
-<? include "ui/menu.php"; ?>
+<?php include "ui/header.php"; ?>
+<?php include "ui/menu.php"; ?>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -89,12 +89,12 @@ unset($_SESSION['jabatan']);
 
 
    123<br>
-   <? echo md5("123");?><br>
-   <? echo hash('sha256',"123");   ?><br> 
+   <?php echo md5("123");?><br>
+   <?php echo hash('sha256',"123");   ?><br> 
   </div>
   </div>
   
-<? include "ui/footer.php"; ?>
+<?php include "ui/footer.php"; ?>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="assets/js/jquery-1.10.2.js"></script>
