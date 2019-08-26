@@ -215,11 +215,8 @@ if ($vpc->compareHash() == 1 && !$adaDalamDb && $txnResponseCode==0 && $message=
     // if ($debug) {
         // $email = $emel_debug;
         // // send_email($subj,$body,$email, $email);
-    // } 
-
-    
+    // }
 }
-
 
 // data for page
 $page = array();
@@ -265,7 +262,6 @@ $page['authStatus'] = $authStatus;
 //print_r($page);
 //echo "</pre>";
 
-
 //--------------------------------------------------------------------------------------------
 //_______________________________[SERVER]_ADD EVENT___________________________________________
 //--------------------------------------------------------------------------------------------
@@ -303,13 +299,9 @@ $page['authStatus'] = $authStatus;
 	echo "</table>";
 
 	echo "<p>Catatan: Resit ini dijana oleh komputer tiada tandatangan diperlukan.</p>";
-	
 
 $sqlP="INSERT INTO transaksi (ic_pengguna,id_kodtransaksi,id_jenistransaksi,tarikh,jumlah,daripada,kepada,statustransaction,norujukan,rf,merchantid,jeniskad,status_dokumen) VALUES ('$user','$idk','$id_jenistransaksi','$tarikh','$pa','$user','941013115436','$message','$transactionNo','$rf','$merchantID','$cardType','NO')";
 $resultP=mysqli_query($conn,$sqlP)or die(mysqli_error());
-
-
-
 
 unset($_SESSION['hashing']);
 unset($_SESSION['USER']);

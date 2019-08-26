@@ -6,5 +6,5 @@
    $cs      = 'utf8';
 
    //untuk web
-   $conn=mysqli_connect($hn, $un, $pwd, $db) or die(mysqli_error());
+   echo $pwd; $conn=mysqli_connect($hn, $un, $pwd, $db) or die(mysqli_error());
 ?>

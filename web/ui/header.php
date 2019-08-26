@@ -31,8 +31,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: Arial, Helvetica, sans-serif;}
 
 <?php include "functions.php"; ?>
 
-<!--
- <div id="preloader">
+
+ <!-- <div id="preloader">
       <div id="status">
         <img alt="logo" src="imgs/ico.png">
       </div>

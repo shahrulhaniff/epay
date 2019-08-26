@@ -3,8 +3,8 @@
 --
 /* DROP DATABASE cashless; */ 
  
- CREATE DATABASE cashless;  
- USE cashless; /* * /
+-- CREATE DATABASE cashless;  
+ USE id9453057_cashless; /* * /
  USE id9453057_cashless;
 
 

@@ -161,10 +161,10 @@ while($fetchK=mysqli_fetch_array($resK)){
 												<div class="form-group" align="left">
 												<label>Jenis Transaksi</label>
 											<select required class="form-control" name="jenistransaksi" value="">
-												<option value="<?php echo $fetchK['jenistransaksi']; ?>"><?php echo $namajenist2; ?></option>
-												<option value="SBT">Sebut Harga/Tender</option>
-												<option value="SYD">Seminar/Yuran/Denda</option>
-												<option value="D">Derma</option>
+				<option <?php if($fetchK['jenistransaksi']=="SBT"){ echo "selected"; } ?> value="SBT">Sebut Harga/Tender</option>
+				<option <?php if($fetchK['jenistransaksi']=="SYD"){ echo "selected"; } ?> value="SYD">Seminar/Yuran/Denda</option>
+				<option <?php if($fetchK['jenistransaksi']=="D"){ echo "selected"; } ?> value="D">Derma</option>
+				<option <?php if($fetchK['jenistransaksi']=="J"){ echo "selected"; } ?> value="J">Jualan Buku</option>
 											</select>
 											</div>
 <!--								

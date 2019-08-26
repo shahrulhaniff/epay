@@ -38,7 +38,7 @@ include "../../server.php";
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','https://epayment.unisza.edu.my/sample/sample_finish.php',$byrn_array);
     // yg ni unkomen $vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','https://epayment.unisza.edu.my/langlit_finish.php',$byrn_array);
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','https://epayment.unisza.edu.my/sample/sample_finish.php');
-    $vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS','https://epay.unisza.edu.my/app/sample/sample_finish.php');
+    $vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS','https://epay.unisza.edu.my/epay/app/sample/sample_finish.php');
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS','https://cashless1234.000webhostapp.com/app/sample/sample_finish.php');
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'CASHLESS-APP','http://localhost/cashweb/app/sample/sample_finish.php');
     //$vpc  = new vpcGenerateLink("prod","Payment Sample",'PC KOD SAMPLE','http://myraxsoft.com/cashless/app/sample/sample_finish.php');

@@ -85,13 +85,13 @@ unset($_SESSION['jabatan']);
   </div>
 
   <div class="w3-panel">
-    <div class="w3-row-padding" style="margin:0 -16px">
-
-
+  
+   <!-- <div class="w3-row-padding" style="margin:0 -16px">
    123<br>
    <?php echo md5("123");?><br>
    <?php echo hash('sha256',"123");   ?><br> 
-  </div>
+  </div> -->
+  
   </div>
   
 <?php include "ui/footer.php"; ?>
@@ -112,7 +112,7 @@ unset($_SESSION['jabatan']);
 
 
   <!-- last skali paste preloader js punya sebelum tutup body -->
-  <script src="pre/jquery.magnific-popup.min.min.js"></script>
+  <script src="pre/jquery.magnific-popup.min.js"></script>
   <script src="pre/main.js"></script>
 
 </div>

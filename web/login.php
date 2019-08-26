@@ -23,12 +23,12 @@
  <form action="login2.php" method="POST">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input id="email" type="text" class="form-control" name="usr" value="bendahari@unisza.edu.my" placeholder="ID Sub-Admin" autocomplete="off">
+      <input id="email" type="text" class="form-control" name="usr" placeholder="Admin ID" autocomplete="off">
     </div>
     <br>
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-      <input id="password" type="password" class="form-control" name="pwd" value="123" placeholder="Kata Laluan" autocomplete="new-password">
+      <input id="password" type="password" class="form-control" name="pwd" placeholder="Kata Laluan" autocomplete="new-password">
     </div>
 	<input type="checkbox" onclick="myFunction()">Show Password
     <br>
@@ -62,7 +62,7 @@
 
     <script src="assets/js/jquery-1.10.2.js"></script>
    <!--last skali paste preloader js punya sebelum tutup body -->
-  <script src="pre/jquery.magnific-popup.min.min.js"></script>
+  <script src="pre/jquery.magnific-popup.min.js"></script>
   <script src="pre/main.js"></script>
 </body>
 </html>

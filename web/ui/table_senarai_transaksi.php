@@ -145,8 +145,10 @@ $tarikh= DateTime::createFromFormat('Y-m-d H:i:s', $tarikh)->format('d/m/Y g:i a
 													<?
 														$dataJT = mysqli_query($conn,"SELECT jenistransaksi FROM kod_jenistransaksi WHERE id_jenistransaksi='".$info['id_jenistransaksi']."' order by id_jenistransaksi");	
 														$infoJT = mysqli_fetch_array( $dataJT );
+														
+														$JT=getNamaJenisT($infoJT['jenistransaksi']);
 													?>
-													<span> : <? echo $infoJT['jenistransaksi'];?></span>
+													<span> : <?=$JT?></span>
 													
 												</div>	
 											

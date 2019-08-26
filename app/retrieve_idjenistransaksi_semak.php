@@ -19,6 +19,11 @@
 		$stmt2 	=$pdo->query('SELECT * FROM kod_jenistransaksi WHERE jabatan="'.$j.'"');
 		$count2 = $stmt2->rowCount();
 		$i->loop = $count2;
+		//semak jika ada bayaran
+		$x = $row['id_jenistransaksi'];
+		$stmt3 	=$pdo->query('SELECT * FROM kod_transaksi WHERE id_jenistransaksi="'.$x.'" AND tarikhtutup >= CURDATE() ORDER BY tarikhtutup ASC');
+		$count3 = $stmt3->rowCount();
+		$i->displayx = $count3;
 		
 		$i->id_jenistransaksi = $row['id_jenistransaksi'];
 		$i->jenistransaksi = $row['jenistransaksi'];

@@ -21,13 +21,31 @@ function getJabatan($idPekerja){
 }
 
 //----------------------------------------------------------------------------------
-// get Jabatan from id_kodtransaksi.
+// [type1]get Jabatan from id_kodtransaksi.
 //----------------------------------------------------------------------------------
 function getJabatanByIDK($id_kodtransaksi){
-	include "../../global.php";
+	include "../../global.php"; //2 global sbb guna dalam extension
 	$s="SELECT jabatan from kod_jenispengguna K, kod_transaksi A
 		WHERE A.id_kodtransaksi='$id_kodtransaksi'
 		AND K.kod_pengguna=A.kod_pengguna
+		";
+	$r=mysqli_query($conn, $s);
+	$row=mysqli_fetch_row($r);
+
+	if ($row[0]!=""){
+		return $row[0];
+	}
+	else{
+		return null;
+	}
+}
+//----------------------------------------------------------------------------------
+// [type2] get Jabatan from id_jenistransaksi.
+//----------------------------------------------------------------------------------
+function getJabatanByIDJT($id_jenistransaksi){
+	include "../global.php";
+	$s="SELECT jabatan from kod_jenistransaksi
+		WHERE id_jenistransaksi='$id_jenistransaksi'
 		";
 	$r=mysqli_query($conn, $s);
 	$row=mysqli_fetch_row($r);
