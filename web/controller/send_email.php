@@ -27,7 +27,10 @@
 
 	$qryAdmin="SELECT * FROM maklumat_pengguna WHERE ic_pengguna='$icNo' AND email='$emel'";
 	$resultAdmin=mysqli_query($conn,$qryAdmin);
-	if($resultAdmin==true){
+	
+	$row2 = mysqli_fetch_array($resultAdmin);
+	
+	if($row2==true){
 			function password_generate($chars){
 				  $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
 				  return substr(str_shuffle($data), 0, $chars);
@@ -48,16 +51,14 @@
 				$mail->Body    = $bodyContent;
 				
 				if(!$mail->send()) {
-
 					echo"<script>alert('Mesej Tidak Dihantar!!');document.location.href='../forgot_password.php';</script>";
 					echo 'Mailer Error: ' . $mail->ErrorInfo;
 
 					echo"<script>alert('Message not sent!!');document.location.href='../forgot_password.php';</script>";
 					//echo 'Mailer Error: ' . $mail->ErrorInfo;
-
-				} 
+				}
 				else {
-					$SQLstring="UPDATE akaun_pengguna SET pwd='$my_passwords2' WHERE ic_pengguna='$icNo' and kod_pengguna!='1'";
+					$SQLstring="UPDATE akaun_pengguna SET pwd='$my_passwords2' WHERE ic_pengguna='$icNo'";  //and kod_pengguna!='1'
 					$QueryResult=mysqli_query($conn,$SQLstring);
 					echo"<script>alert('Mesej Telah Dihantar!!');document.location.href='../login.php';</script>";
 					
@@ -65,7 +66,7 @@
 		
 	}
 	else {
-		echo"<script>alert('Invalid Data!!');document.location.href='../form_forgot_password.php';</script>";
+		echo"<script>alert('Invalid Data!!');document.location.href='../forgot_password.php';</script>";
 		die("Query failed");
 	}
 ?>

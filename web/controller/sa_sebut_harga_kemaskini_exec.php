@@ -23,7 +23,7 @@
 		
 		
 		//Orang yang add Jenis Bayaran ni sahaja boleh edit.. ER195E
-		if ($edit_by==$keyin_by){
+		//if ($edit_by==$keyin_by){
 			
 				$sql="UPDATE kod_transaksi  set id_kodtransaksi = '$id_kodtransaksi', kod_pengguna = '$kod_pengguna', no_sb = '$no_sb', 
 					description = '$description',tarikhbuka = '$tarikhbuka', tarikhtutup = '$tarikhtutup', jam = '$jam', harga = '$harga',
@@ -74,7 +74,7 @@
 				}
 			}
 			 
-		}else{
+		/*}else{
 			 if($status=='1'){
 					echo ("<script LANGUAGE='JavaScript'>
 					window.alert('Pengguna lain tidak dibenarkan mengemaskini maklumat ini. ER195E');
@@ -92,7 +92,7 @@
 					</script>");
 				}
 			
-		}
+		} */
 		
 
         

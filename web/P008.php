@@ -46,7 +46,7 @@ if (empty($_SESSION['user'])) {
 	
 <!-- End page content -->
   <!-- last skali paste preloader js punya sebelum tutup body -->
-  <script src="pre/jquery.magnific-popup.min.min.js"></script>
+  <script src="pre/jquery.magnific-popup.min.js"></script>
   <script src="pre/main.js"></script>
 </div>
 </body>

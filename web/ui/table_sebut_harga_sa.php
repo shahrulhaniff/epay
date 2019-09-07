@@ -53,7 +53,7 @@ $kod_pengguna=mysqli_fetch_object($result1)->kod_pengguna;
 												<!-- <label><font color="red">** Maklumat Wajib Diisi.</font></label>
 												<br>-->
 													 
-													<!-- <input type="hidden" name="id_kodtransaksi" id="id_kodtransaksi" class="form-control" value="<? echo $id;?>" readonly />-->
+<!-- <input type="hidden" name="id_kodtransaksi" id="id_kodtransaksi" class="form-control" value="< ? echo $id;?>" readonly />-->
 												
 												
 												<div class="form-group">
